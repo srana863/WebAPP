@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import ValidateForm from 'src/app/helpers/validateform';
 import { LoginService } from 'src/app/services/auth/login.service';
-import { CommonService } from 'src/app/services/common.service';
+import { CommonService } from 'src/app/services/common/common.service';
+
 
 @Component({
   selector: 'app-login',
@@ -51,7 +52,7 @@ export class LoginComponent {
       ValidateForm.validateAllFormFileds(this.loginForm);
     }
   }
- 
+
   hideShowPass(){
     this.isText=!this.isText;
     this.isText?this.eyeItem="fa-eye": this.eyeItem="fa-eye-slash";

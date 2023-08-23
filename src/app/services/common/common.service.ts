@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CommonService {
 
   public apiUrl:string="https://localhost:7105/api/";
- 
+
   private fullName$=new BehaviorSubject<string>("");
   private role$=new BehaviorSubject<string>("");
 

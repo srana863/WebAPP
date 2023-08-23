@@ -9,13 +9,13 @@ import { LoginService } from 'src/app/services/auth/login.service';
   styleUrls: ['./admin.component.scss']
 })
 export class AdminComponent implements OnInit{
- 
+
   constructor(private auth:LoginService){
 
   }
 
   ngOnInit(): void {
-    
+
   }
 
   logout(){

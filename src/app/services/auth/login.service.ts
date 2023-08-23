@@ -3,7 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import { Router } from '@angular/router';
 import {JwtHelperService} from '@auth0/angular-jwt'
 import { TokenApiModel } from '../../models/loginModel';
-import { CommonService } from '../common.service';
+import { CommonService } from 'src/app/services/common/common.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,7 @@ export class LoginService {
 
   private baseUrl:string="";
   private userPayLoad:any;
-  constructor(private http:HttpClient,private route:Router, private common:CommonService) {   
+  constructor(private http:HttpClient,private route:Router, private common:CommonService) {
     this.userPayLoad=this.decodedToken();
     this.baseUrl=this.common.apiUrl+'User/';
   }
@@ -32,11 +32,11 @@ export class LoginService {
 
   storeToken(tokenValue:string)
   {
-    localStorage.setItem('token',tokenValue); 
+    localStorage.setItem('token',tokenValue);
   }
   storeRefreshToken(tokenValue:string)
   {
-    localStorage.setItem('refreshToken',tokenValue); 
+    localStorage.setItem('refreshToken',tokenValue);
   }
   getToken()
   {
