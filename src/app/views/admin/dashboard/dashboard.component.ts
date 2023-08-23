@@ -14,9 +14,8 @@ export class DashboardComponent {
 
   }
   ngOnInit(): void {
-   
-  }
 
+  }
 
   customerform=this.builder.group({
    name:this.builder.control('',Validators.required),

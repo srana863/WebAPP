@@ -26,7 +26,7 @@ import { TokenInterceptor } from './interceptor/token.interceptor';
     HttpClientModule,
     MaterialModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot()
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,
