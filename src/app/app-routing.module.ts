@@ -25,7 +25,36 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () => import('./views/auth/home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('./views/auth/about/about.module').then(m => m.AboutModule)
+      },
+      {
+        path: 'course',
+        loadChildren: () => import('./views/auth/course/course.module').then(m => m.CourseModule)
+      },
+      {
+        path: 'coursedetails',
+        loadChildren: () => import('./views/auth/coursedetails/coursedetails.module').then(m => m.CoursedetailsModule)
+      },
+      {
+        path: 'trainers',
+        loadChildren: () => import('./views/auth/trainers/trainers.module').then(m => m.TrainersModule)
+      },
+      {
+        path: 'events',
+        loadChildren: () => import('./views/auth/events/events.module').then(m => m.EventsModule)
+      },
+      {
+        path: 'pricing',
+        loadChildren: () => import('./views/auth/pricing/pricing.module').then(m => m.PricingModule)
+      },
+      {
+        path: 'contact',
+        loadChildren: () => import('./views/auth/contact/contact.module').then(m => m.ContactModule)
       }
+
     ]
   },
   {

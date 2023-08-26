@@ -11,13 +11,19 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { MaterialModule } from './material.module';
 import { TokenInterceptor } from './interceptor/token.interceptor';
+import { AuthheaderComponent } from './layouts/authheader/authheader.component';
+import { AuthfooterComponent } from './layouts/authfooter/authfooter.component';
+import { AboutComponent } from './views/auth/about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    AdminComponent
+    AdminComponent,
+    AuthheaderComponent,
+    AuthfooterComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
