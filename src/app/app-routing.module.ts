@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './layouts/admin/admin.component';
 import { AuthComponent } from './layouts/auth/auth.component';
 import { AuthGuard } from './guards/auth.guard';
+import { PageNotFoundComponent } from './views/auth/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -15,46 +16,9 @@ const routes: Routes = [
     component: AuthComponent,
     children: [
       {
-        path: 'login',
-        loadChildren: () => import('./views/auth/login/login.module').then(m => m.LoginModule)
-      },
-      {
-        path: 'register',
-        loadChildren: () => import('./views/auth/register/register.module').then(m => m.RegisterModule)
-      },
-      {
         path: 'home',
         loadChildren: () => import('./views/auth/home/home.module').then(m => m.HomeModule)
       },
-      {
-        path: 'about',
-        loadChildren: () => import('./views/auth/about/about.module').then(m => m.AboutModule)
-      },
-      {
-        path: 'course',
-        loadChildren: () => import('./views/auth/course/course.module').then(m => m.CourseModule)
-      },
-      {
-        path: 'coursedetails',
-        loadChildren: () => import('./views/auth/coursedetails/coursedetails.module').then(m => m.CoursedetailsModule)
-      },
-      {
-        path: 'trainers',
-        loadChildren: () => import('./views/auth/trainers/trainers.module').then(m => m.TrainersModule)
-      },
-      {
-        path: 'events',
-        loadChildren: () => import('./views/auth/events/events.module').then(m => m.EventsModule)
-      },
-      {
-        path: 'pricing',
-        loadChildren: () => import('./views/auth/pricing/pricing.module').then(m => m.PricingModule)
-      },
-      {
-        path: 'contact',
-        loadChildren: () => import('./views/auth/contact/contact.module').then(m => m.ContactModule)
-      }
-
     ]
   },
   {
@@ -71,7 +35,11 @@ const routes: Routes = [
         loadChildren: () => import('./views/admin/profile/profile.module').then(m => m.ProfileModule)
       }
     ]
-  }
+  },
+  {
+    path: '**',
+    component:PageNotFoundComponent 
+  },
 ];
 
 @NgModule({

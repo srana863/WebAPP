@@ -13,7 +13,7 @@ import { MaterialModule } from './material.module';
 import { TokenInterceptor } from './interceptor/token.interceptor';
 import { AuthheaderComponent } from './layouts/authheader/authheader.component';
 import { AuthfooterComponent } from './layouts/authfooter/authfooter.component';
-import { AboutComponent } from './views/auth/about/about.component';
+import { PageNotFoundComponent } from './views/auth/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -23,7 +23,7 @@ import { AboutComponent } from './views/auth/about/about.component';
     AdminComponent,
     AuthheaderComponent,
     AuthfooterComponent,
-    AboutComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
