@@ -13,16 +13,16 @@ export class CommonService {
 
   constructor() { }
 
-  public getRoleFromStore(){
-    return this.role$.asObservable();
-  }
-  public setRoleForStore(role:string){
-    this.role$.next(role);
-  }
-  public getFullNameFromStore(){
-    return this.fullName$.asObservable();
-  }
-  public setFullNameForStore(fullname:string){
-    this.fullName$.next(fullname);
-  }
+  // public getRoleFromStore(){
+  //   return this.role$.asObservable();
+  // }
+  // public setRoleForStore(role:string){
+  //   this.role$.next(role);
+  // }
+  // public getFullNameFromStore(){
+  //   return this.fullName$.asObservable();
+  // }
+  // public setFullNameForStore(fullname:string){
+  //   this.fullName$.next(fullname);
+  // }
 }

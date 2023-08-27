@@ -37,9 +37,9 @@ export class LoginComponent {
         next:(res)=>{
           this.auth.storeToken(res.accessToken);
           this.auth.storeRefreshToken(res.refreshToken);
-          const tokenPayload=this.auth.decodedToken();
-          this.userStore.setFullNameForStore(tokenPayload.name);
-          this.userStore.setRoleForStore(tokenPayload.role);
+          //const tokenPayload=this.auth.decodedToken();
+          // this.userStore.setFullNameForStore(tokenPayload.name);
+          // this.userStore.setRoleForStore(tokenPayload.role);
           this.toast.success("Welcome");
           this.loginForm.reset();
           this.router.navigate(['admin','dashboard']);

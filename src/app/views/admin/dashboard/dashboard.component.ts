@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/services/admin/user.service';
+import { LoginService } from 'src/app/services/auth/login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,12 +12,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class DashboardComponent {
   countrylist=['India','USA','Singapore','UK']
   termlist=['15days','30days','45days','60days']
-
-  constructor(private builder:FormBuilder){
+  public users:any = [];
+  constructor(private builder:FormBuilder, private router:Router, private userService:UserService){
 
   }
   ngOnInit(): void {
-
+    this.userService.getUserList().subscribe(res=>{
+      this.users=res;
+    });
   }
 
   customerform=this.builder.group({
